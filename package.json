@@ -1,0 +1,16 @@
+{
+  "name": "hello-world-docker-deployment",
+  "version": "0.0.0",
+  "description": "just a quick docker deployment example",
+  "author": "Joel Cox",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "echo no tests defined"
+  },
+  "devDependencies": {
+    "@pinecodes/cdk": "^1.0.4",
+    "aws-cdk": "^2.41.0",
+    "aws-cdk-lib": "^2.41.0"
+  }
+}

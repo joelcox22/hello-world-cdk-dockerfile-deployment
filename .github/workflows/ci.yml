@@ -1,0 +1,14 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  main:
+    uses: joelcox22/pinecodes-cdk/.github/workflows/ci-workflow.yml@main
