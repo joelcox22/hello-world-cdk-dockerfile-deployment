@@ -20,7 +20,7 @@ Resources:
         - Key: stickiness.enabled
           Value: 'false'
       TargetType: ip
-      VpcId: vpc-12345
+      VpcId: vpc-0aea5810a6a802e2f
   helloworldtaskDefinitionTaskRoleA8F6AE15:
     Type: AWS::IAM::Role
     Properties:
@@ -130,8 +130,9 @@ Resources:
           SecurityGroups:
             - !GetAtt helloworldserviceSecurityGroupDAB172A9.GroupId
           Subnets:
-            - p-12345
-            - p-67890
+            - subnet-017c172356cdb7d8c
+            - subnet-0eed0e5bd3d954b96
+            - subnet-0bfd593f1f7400c18
       TaskDefinition: !Ref helloworldtaskDefinition0C81A936
     DependsOn:
       - helloworldlistenerRule27A0E55C
@@ -143,15 +144,24 @@ Resources:
         - CidrIp: 0.0.0.0/0
           Description: Allow all outbound traffic by default
           IpProtocol: '-1'
-      VpcId: vpc-12345
-  helloworldserviceSecurityGroupfromhelloworldlistenerSecurityGroupsg123456789012FFF34F768055D8D323:
+      VpcId: vpc-0aea5810a6a802e2f
+  helloworldserviceSecurityGroupfromhelloworldlistenerSecurityGroupsg0981fc0e7cd1db05a78EBDA77809C807DC1:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       IpProtocol: tcp
       Description: Load balancer to target
       FromPort: 80
       GroupId: !GetAtt helloworldserviceSecurityGroupDAB172A9.GroupId
-      SourceSecurityGroupId: sg-12345
+      SourceSecurityGroupId: sg-0981fc0e7cd1db05a
+      ToPort: 80
+  helloworldlistenerSecurityGroupsg0981fc0e7cd1db05atohelloworldserviceSecurityGroupA1DC496380D8DBD066:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      GroupId: sg-0981fc0e7cd1db05a
+      IpProtocol: tcp
+      Description: Load balancer to target
+      DestinationSecurityGroupId: !GetAtt helloworldserviceSecurityGroupDAB172A9.GroupId
+      FromPort: 80
       ToPort: 80
   helloworldpriorityhandlerServiceRole34911B70:
     Type: AWS::IAM::Role
@@ -277,7 +287,7 @@ Resources:
     Properties:
       ServiceToken: !GetAtt helloworldpriorityproviderframeworkonEvent518EFA67.Arn
       listenerArn: >-
-        arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/application/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2
+        arn:aws:elasticloadbalancing:ap-southeast-2:849066399364:listener/app/shared/0b9a67d27227b372/040c16e3cbe39e25
     UpdateReplacePolicy: Delete
     DeletionPolicy: Delete
   helloworldlistenerRule27A0E55C:
@@ -292,16 +302,16 @@ Resources:
             Values:
               - hello-world.pine.codes
       ListenerArn: >-
-        arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/application/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2
+        arn:aws:elasticloadbalancing:ap-southeast-2:849066399364:listener/app/shared/0b9a67d27227b372/040c16e3cbe39e25
       Priority: !GetAtt helloworldpriorityresource21A2AAFD2.priority
   helloworlddnsCEC9186C:
     Type: AWS::Route53::RecordSet
     Properties:
       Name: hello-world.pine.codes.
       Type: CNAME
-      HostedZoneId: DUMMY
+      HostedZoneId: Z08845946NQV8QJGIVXX
       ResourceRecords:
-        - my-load-balancer-1234567890.us-west-2.elb.amazonaws.com
+        - internal-shared-1456911017.ap-southeast-2.elb.amazonaws.com
       TTL: '300'
   LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB:
     Type: AWS::IAM::Role

@@ -1,10 +1,9 @@
-import { App } from 'aws-cdk-lib';
-import { Stack, DockerfileDeployment } from '@pinecodes/cdk';
+import * as cdk from '@pinecodes/cdk';
 
-export const app = new App();
+export const app = new cdk.App();
 
-const stack = new Stack(app, 'hello-world');
+const stack = new cdk.Stack(app, 'hello-world');
 
-new DockerfileDeployment(stack, 'hello-world', {
+new cdk.DockerfileDeployment(stack, 'hello-world', {
   containerPort: 80,
 });
