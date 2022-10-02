@@ -1503,9 +1503,9 @@
     "@octokit/openapi-types" "^13.11.0"
 
 "@pinecodes/cdk@^1.0.4":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@pinecodes/cdk/-/cdk-1.6.1.tgz#84d5caa71914178aaad0ba9c8ac5cdb1f59047a6"
-  integrity sha512-H4aM1mu3XWHssh7OJueJOrt9SDDJ1n2tbaxADo2zMpLg2hGiJ2hN3Ttpq1xFDw/+PAKsUQNouuXeu7QIKqJ4Ig==
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@pinecodes/cdk/-/cdk-1.6.2.tgz#fdac5f870b819024c43c512d0512a1ae3f133caa"
+  integrity sha512-C3BIkydhPPJNZylskJ0CrTSoo4qn7ENb15zEUSnMb7yZNPve2/P1eape06nfxi+JwBscNTUavVFy+blDly8XZA==
   dependencies:
     "@aws-sdk/client-elastic-load-balancing-v2" "^3.181.0"
     app-root-path "^3.1.0"

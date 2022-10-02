@@ -163,7 +163,7 @@ Resources:
       DestinationSecurityGroupId: !GetAtt helloworldserviceSecurityGroupDAB172A9.GroupId
       FromPort: 80
       ToPort: 80
-  helloworldpriorityresource21A2AAFD2:
+  helloworldpriorityresource258B13EA:
     Type: Custom::ListenerRulePriority
     Properties:
       ServiceToken: !ImportValue ListenerRulePriorityServiceToken
@@ -184,7 +184,7 @@ Resources:
               - hello-world.pine.codes
       ListenerArn: >-
         arn:aws:elasticloadbalancing:ap-southeast-2:849066399364:listener/app/shared/0b9a67d27227b372/040c16e3cbe39e25
-      Priority: !GetAtt helloworldpriorityresource21A2AAFD2.priority
+      Priority: !GetAtt helloworldpriorityresource258B13EA.priority
   helloworlddnsCEC9186C:
     Type: AWS::Route53::RecordSet
     Properties:
