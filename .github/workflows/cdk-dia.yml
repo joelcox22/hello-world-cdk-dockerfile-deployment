@@ -1,0 +1,10 @@
+name: cdk-dia
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  main:
+    uses: joelcox22/pinecodes-cdk/.github/workflows/cdk-dia-workflow.yml
