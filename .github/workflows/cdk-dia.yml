@@ -7,4 +7,4 @@ on:
 
 jobs:
   main:
-    uses: joelcox22/pinecodes-cdk/.github/workflows/cdk-dia-workflow.yml
+    uses: joelcox22/pinecodes-cdk/.github/workflows/cdk-dia-workflow.yml@main
