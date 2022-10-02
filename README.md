@@ -2,4 +2,4 @@
 
 A minimal example repo for a quick dockerfile deployment.
 
-![diagram](./diagram.png)
+![cdk-dia](https://github.com/joelcox22/hello-world-cdk-docker-deployment/wiki/cdk-dia.png)
