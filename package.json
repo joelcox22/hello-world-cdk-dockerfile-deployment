@@ -6,11 +6,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "test": "echo no tests defined"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "devDependencies": {
     "@pinecodes/cdk": "^1.0.4",
+    "@types/jest": "^29.1.1",
     "aws-cdk": "^2.41.0",
-    "aws-cdk-lib": "^2.41.0"
+    "aws-cdk-lib": "^2.41.0",
+    "jest": "^29.1.2"
   }
 }

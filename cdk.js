@@ -1,7 +1,7 @@
 import { App } from 'aws-cdk-lib';
 import { Stack, DockerfileDeployment } from '@pinecodes/cdk';
 
-const app = new App();
+export const app = new App();
 
 const stack = new Stack(app, 'hello-world');
 
