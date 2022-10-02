@@ -1205,9 +1205,9 @@
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@pinecodes/cdk@^1.0.4":
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/@pinecodes/cdk/-/cdk-1.5.4.tgz#4328b7d93daffb4b55405cccc89a2f0479f4378e"
-  integrity sha512-FEx5eIyyWEDZ+nZyDWPLozRk19oVSF/hc5EFy2DTR4SyZlkosvtR6XTPkRuOV0zDAvjEQVeOudTv80syLNCjrg==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@pinecodes/cdk/-/cdk-1.6.0.tgz#351a477d99ecbb80906ff9842cf8ab22ade9cd3e"
+  integrity sha512-ZYX7bzKsDN5IS64eJarI31n36N/H/Fxgg1j7PCD0T2vftBNMTKG1anUr0EocE+EW4oT2KcfT2qjq2Wc/SUdWUw==
   dependencies:
     "@aws-sdk/client-elastic-load-balancing-v2" "^3.181.0"
     app-root-path "^3.1.0"
